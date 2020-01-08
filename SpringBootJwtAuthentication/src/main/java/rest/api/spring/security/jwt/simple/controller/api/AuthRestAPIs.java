@@ -1,4 +1,4 @@
-package rest.api.spring.security.jwt.simple.controller;
+package rest.api.spring.security.jwt.simple.controller.api;
 
 import java.util.HashSet;
 import java.util.Set;
