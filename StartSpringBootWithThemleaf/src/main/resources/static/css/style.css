@@ -1,0 +1,20 @@
+#thead-first-name{
+	cursor: pointer;
+}
+.current{
+	background-color: #333!important;
+    color: #fff!important;
+}
+
+.show-navigation li{
+	width: 35px;
+    height: 35px;
+    padding: 5px;
+	text-align: center;
+	border: 1px solid #ddd;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.show-navigation{
+	margin-bottom: 0!important;
+}

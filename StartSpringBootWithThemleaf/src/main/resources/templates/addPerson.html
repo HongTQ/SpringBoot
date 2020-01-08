@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Quan ly thong tin nhan su</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+<link rel="shortcut icon" href="#" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row bg-dark">
+				<div class="col-md-6 align-self-center">
+					<a class="navbar-brand text-danger" href="/">Demo Spring Boot
+						and Thymeleaf </a>
+				</div>
+				<div class="col-md-6">
+					<nav class="navbar navbar-expand-md navbar-dark">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="/">List
+									Persons</a></li>
+							<li class="nav-item"><a class="nav-link" href="/listCareers">List
+									Careers </a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="container my-3">
+			<h2>Add person</h2>
+			<form action="" method="post">
+				<div class="form-group">
+					<label for="first_name">First name</label>
+					<div id="fail_first_name" class="text-danger"></div>
+					<input type="text" class="form-control"
+						placeholder="Enter first name" id="first_name">
+				</div>
+				<div class="form-group">
+					<label for="last_name">Last name</label>
+					<div id="fail_last_name" class="text-danger"></div>
+					<input type="text" class="form-control"
+						placeholder="Enter last name" id="last_name" />
+				</div>
+				<div class="form-group">
+					<label for="sex">Sex:</label>
+					<div id="fail_sex" class="text-danger"></div>
+					<select class="form-control" id="sex">
+						<option value="true">Male</option>
+						<option value="false">Female</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="birthday">Birthday</label>
+					<div id="fail_birthday" class="text-danger"></div>
+					<input type="date" class="form-control"
+						placeholder="Enter birthday" id="birthday" />
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<div id="fail_phone" class="text-danger"></div>
+					<input type="text" class="form-control" placeholder="Enter phone"
+						id="phone" />
+				</div>
+				<div class="form-group">
+					<label for="address">Address</label>
+					<div id="fail_address" class="text-danger"></div>
+					<input type="text" class="form-control" placeholder="Enter address"
+						id="address" />
+				</div>
+				<div class="form-group">
+					<label for="address">Careers</label>
+					<div id="career_check"></div>
+				</div>
+				<input type="button" class="btn btn-info" value="Add new"
+					id="submit_add_new" />
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" th:src="|/js/jquery.min.js|"></script>
+	<script type="text/javascript" th:src="|/js/addPerson.js|"></script>
+</body>
+</html>
