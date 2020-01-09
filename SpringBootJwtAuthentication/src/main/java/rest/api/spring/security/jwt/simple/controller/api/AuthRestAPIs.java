@@ -71,8 +71,8 @@ public class AuthRestAPIs {
 		}
 
 		// Creating user's account
-		User user = new User(signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(),
-				encoder.encode(signUpRequest.getPassword()));
+		User user = new User(0, signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(),
+				encoder.encode(signUpRequest.getPassword()), null, null);
 
 		Set<String> strRoles = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
@@ -85,16 +85,16 @@ public class AuthRestAPIs {
 				roles.add(adminRole);
 
 				break;
-			case "view":
-				Role viewRole = roleRepository.findByName(RoleName.ROLE_VIEW)
-						.orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
-				roles.add(viewRole);
-
-				break;
-			default:
+			case "user":
 				Role userRole = roleRepository.findByName(RoleName.ROLE_USER)
 						.orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
 				roles.add(userRole);
+
+				break;
+			default:
+				Role viewRole = roleRepository.findByName(RoleName.ROLE_VIEW)
+						.orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
+				roles.add(viewRole);
 			}
 		});
 
