@@ -38,10 +38,21 @@ public class PersonServiceImpl implements PersonService {
 			personUpdate.setAddress(person.getAddress());
 			personUpdate.setBirthday(person.getBirthday());
 			personUpdate.setEmail(person.getEmail());
-			personUpdate.setName(person.getEmail());
+			personUpdate.setName(person.getName());
 			personUpdate.setPhone(person.getPhone());
 			return personRepository.save(personUpdate);
 		}
+	}
+
+	@Override
+	public Optional<Person> findPersonById(int id) {
+		// TODO Auto-generated method stub
+		return personRepository.findById(id);
+	}
+
+	@Override
+	public Person addPerson(Person person) {
+		return personRepository.save(person);
 	}
 
 }

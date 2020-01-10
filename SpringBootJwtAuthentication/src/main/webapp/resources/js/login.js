@@ -32,7 +32,7 @@ $(document).ready(function() {
 					$(location).attr('href', "/view/persons");
 				},
 				error : function(e) {
-					alert("Login fail");
+					alert("Wrong account or password");
 					console.log(e);
 				}
 			});
